@@ -1,4 +1,4 @@
-import { Content, NotePreviewList, RootLayout, Sidebar } from '@/components'
+import { Content, MarkDownEditor, NotePreviewList, RootLayout, Sidebar } from '@/components'
 import { ActionButtonsRow } from '@/components'
 
 function App() {
@@ -8,7 +8,9 @@ function App() {
         <ActionButtonsRow className="flex justify-between mt-1" />
         <NotePreviewList className="mt-3 space-y-1" />
       </Sidebar>
-      <Content className=" border-l-[1px] border-[#494949] p-2">Content</Content>
+      <Content className=" border-l-[1px] border-[#494949] p-2">
+        <MarkDownEditor />
+      </Content>
     </RootLayout>
   )
 }
