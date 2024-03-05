@@ -1,4 +1,11 @@
-import { Content, MarkDownEditor, NotePreviewList, RootLayout, Sidebar } from '@/components'
+import {
+  Content,
+  FloatingNoteTitle,
+  MarkDownEditor,
+  NotePreviewList,
+  RootLayout,
+  Sidebar
+} from '@/components'
 import { ActionButtonsRow } from '@/components'
 
 function App() {
@@ -9,6 +16,7 @@ function App() {
         <NotePreviewList className="mt-3 space-y-1" />
       </Sidebar>
       <Content className=" border-l-[1px] border-[#494949] p-2">
+        <FloatingNoteTitle />
         <MarkDownEditor />
       </Content>
     </RootLayout>
