@@ -1,4 +1,5 @@
 import {
+  ActionButtonsRow,
   Content,
   FloatingNoteTitle,
   MarkDownEditor,
@@ -6,7 +7,6 @@ import {
   RootLayout,
   Sidebar
 } from '@/components'
-import { ActionButtonsRow } from '@/components'
 import { useRef } from 'react'
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
   }
 
   return (
-    <RootLayout className=" bg-[#1c1c1c]">
+    <RootLayout className=" bg-[#14181e]">
       <Sidebar className="p-2">
         <ActionButtonsRow className="flex justify-between mt-1" />
         <NotePreviewList className="mt-3 space-y-1" onSelect={resetScroll} />

@@ -1,6 +1,6 @@
 import { cn, formatDateFromMs } from '@renderer/utils'
 import { NoteInfo } from '@shared/models'
-import React, { ComponentProps } from 'react'
+import { ComponentProps } from 'react'
 
 export type NotePreviewProps = NoteInfo & {
   isActive?: boolean
@@ -21,8 +21,8 @@ export const NotePreview = ({
       className={cn(
         'cursor-pointer px-2.5 py-3 rounded-md transition-colors duration-75',
         {
-          'bg-zinc-800': isActive,
-          'hover:bg-zinc-800/75': !isActive
+          'bg-[#21312e]': isActive,
+          'hover:bg-[#21312e]/50': !isActive
         },
         className
       )}
