@@ -1,11 +1,10 @@
-import { appDirectoryName, fileEncoding } from '@shared/constants'
 import { NoteInfo } from '@shared/models'
 import { GetNotes } from '@shared/types'
 import { ensureDir, readdir, stat } from 'fs-extra'
 import { homedir } from 'os'
 
 export const getRootDir = () => {
-  return `${homedir()}/${appDirectoryName}`
+  return `${homedir()}/NoteSpace`
 }
 
 export const getNotes: GetNotes = async () => {
@@ -14,7 +13,7 @@ export const getNotes: GetNotes = async () => {
   await ensureDir(rootDir)
 
   const notesFileNames = await readdir(rootDir, {
-    encoding: fileEncoding,
+    encoding: 'utf8',
     withFileTypes: false
   })
 
