@@ -1,6 +1,6 @@
 import { selectedNoteAtom } from '@renderer/store'
 import { useAtomValue } from 'jotai'
-import React, { ComponentProps } from 'react'
+import { ComponentProps } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 export const FloatingNoteTitle = ({ className, ...props }: ComponentProps<'div'>) => {
