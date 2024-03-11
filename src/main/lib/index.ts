@@ -10,6 +10,8 @@ export const getRootDir = () => {
 export const getNotes: GetNotes = async () => {
   const rootDir = getRootDir()
 
+  console.log('Root Dir: ', rootDir)
+
   await ensureDir(rootDir)
 
   const notesFileNames = await readdir(rootDir, {
@@ -35,5 +37,8 @@ export const getNoteInfoFromFilename = async (filename: string): Promise<NoteInf
 export const readNote: ReadNote = async (filename) => {
   const rootDir = getRootDir()
 
-  return readFile(`$${rootDir}/${filename}.md`, { encoding: 'utf8' })
+  await ensureDir(rootDir)
+
+  // return `Hello i am here ${rootDir}`
+  return readFile(`${rootDir}/${filename}.md`, { encoding: 'utf8' })
 }

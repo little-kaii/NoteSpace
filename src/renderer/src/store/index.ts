@@ -25,6 +25,8 @@ const selectedNoteAtomAsync = atom(async (get) => {
 
   const selectedNote = notes[selectedNoteIndex]
 
+  console.log('selected notes :', selectedNote)
+
   const noteContent = await window.context.readNote(selectedNote.title)
 
   console.log('here is the noteContent: ', noteContent)
