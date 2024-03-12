@@ -1,2 +1,2 @@
-export const appDirectoryName = 'NoteMark'
+export const appDirectoryName = 'NoteSpace'
 export const fileEncoding = 'utf8'

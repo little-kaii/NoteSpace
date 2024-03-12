@@ -2,6 +2,7 @@ import { NoteInfo } from '@shared/models'
 import { GetNotes, ReadNote } from '@shared/types'
 import { ensureDir, readFile, readdir, stat } from 'fs-extra'
 import { homedir } from 'os'
+import { fileEncoding } from '../../shared/constants'
 
 export const getRootDir = () => {
   return `${homedir()}/NoteSpace`
@@ -39,6 +40,5 @@ export const readNote: ReadNote = async (filename) => {
 
   await ensureDir(rootDir)
 
-  // return `Hello i am here ${rootDir}`
-  return readFile(`${rootDir}/${filename}.md`, { encoding: 'utf8' })
+  return readFile(`${rootDir}/${filename}.md`, { encoding: fileEncoding })
 }

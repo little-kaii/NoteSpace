@@ -11,8 +11,6 @@ export type NotePreviewListProps = ComponentProps<'ul'> & {
 export const NotePreviewList = ({ className, onSelect, ...props }: NotePreviewListProps) => {
   const { notes, selectedNoteIndex, handleNoteSelect } = useNotesList({ onSelect })
 
-  console.log(notes)
-
   if (!notes) return null
 
   if (isEmpty(notes)) {
